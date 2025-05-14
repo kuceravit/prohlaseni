@@ -1,102 +1,56 @@
 <!DOCTYPE html>
 <html lang="cs">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Prohlášení – Ing. arch. Vít Kučera</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #fdfdfd;
-      color: #222;
-      line-height: 1.6;
-    }
-    header {
-      background-color: #003366;
-      color: white;
-      padding: 2rem 1rem;
-      text-align: center;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2rem;
-    }
-    main {
-      max-width: 800px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-    }
-    section {
-      margin-bottom: 2rem;
-    }
-    h2 {
-      color: #003366;
-    }
-    footer {
-      text-align: center;
-      padding: 1rem;
-      font-size: 0.9rem;
-      background-color: #f0f0f0;
-      color: #666;
-    }
-    a {
-      color: #003366;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <title>Prohlášení k medializované kauze</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body { font-family: sans-serif; max-width: 800px; margin: 2rem auto; padding: 1rem; line-height: 1.6; color: #222; }
+        h1, h2 { color: #111; }
+        .thumb { max-width: 300px; border: 1px solid #ccc; cursor: pointer; display: block; margin: 1rem 0; }
+        .overlay {
+            display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background-color: rgba(0, 0, 0, 0.8); justify-content: center; align-items: center;
+            z-index: 9999;
+        }
+        .overlay img {
+            max-width: 90%; max-height: 90%; border: 5px solid white; box-shadow: 0 0 20px black;
+        }
+    </style>
 </head>
 <body>
-  <header>
     <h1>Prohlášení k medializované kauze</h1>
-    <p>Ing. arch. Vít Kučera – bývalý městský architekt Mníšku pod Brdy</p>
-  </header>
-  <main>
-    <section>
-      <h2>Úvod</h2>
-      <p>
-        V souvislosti s medializovanou kauzou, která zasáhla nejen mé osobní, ale i profesní jméno, považuji za nutné se veřejně vyjádřit. Věci, které byly šířeny v médiích a na sociálních sítích, měly vážný dopad na mou pověst, ačkoliv jsem byl pravomocně osvobozen.
-      </p>
-    </section>
+    <p><strong>Ing. arch. Vít Kučera – bývalý městský architekt Mníšku pod Brdy</strong></p>
 
-    <section>
-      <h2>Rozhodnutí soudu</h2>
-      <p>
-        Soud ve svém rozsudku jednoznačně konstatoval, že se skutek, z něhož jsem byl obviňován, nestal. <br>
-        Rozsudek je dostupný <a href="#">zde (PDF)</a>.
-      </p>
-    </section>
+    <h2>Úvod</h2>
+    <p>V souvislosti s medializovanou kauzou, která zasáhla nejen mé osobní, ale i profesní jméno, považuji za nutné se veřejně vyjádřit. Věci, které byly šířeny v médiích a na sociálních sítích, měly vážný dopad na mou pověst, ačkoliv jsem byl pravomocně osvobozen.</p>
 
-    <section>
-      <h2>Moje stanovisko</h2>
-      <p>
-        Žijeme v době, kdy je snadné poškodit jméno člověka – často stačí jedno obvinění, sdílení a veřejný soud v komentářích. Očistit se je proces náročný, a i když skončí vítězstvím, škody přetrvávají. Toto prohlášení má být krokem k obnovení důvěry a důstojnosti, kterou si jako člověk i architekt, doufám, zasloužím.
-      </p>
-    </section>
+    <h2>Rozhodnutí soudu</h2>
+    <p>Soud ve svém rozsudku jednoznačně konstatoval, že se skutek, z něhož jsem byl obviňován, nestal.</p>
 
-    <section>
-      <h2>Závěrem</h2>
-      <p>
-        Nadále se věnuji své práci s plným nasazením a profesionálním přístupem. Děkuji těm, kteří zachovali důvěru a nenechali se unést dojmy bez důkazů.
-      </p>
-    </section>
-  </main>
-  <p>Proto činím toto stručné prohlášení veřejně dostupným.</p>
+    <h2>Moje stanovisko</h2>
+    <p>Žijeme v době, kdy je snadné poškodit jméno člověka – často stačí jedno obvinění, sdílení a veřejný soud v komentářích. Očistit se je proces náročný, a i když skončí vítězstvím, škody přetrvávají. Toto prohlášení má být krokem k obnovení důvěry a důstojnosti, kterou si jako člověk i architekt, doufám, zasloužím.</p>
+
+    <h2>Závěrem</h2>
+    <p>Nadále se věnuji své práci s plným nasazením a profesionálním přístupem. Děkuji těm, kteří zachovali důvěru a nenechali se unést dojmy bez důkazů.</p>
+    <p>Proto činím toto stručné prohlášení veřejně dostupným.</p>
 
     <h2>Rozsudek</h2>
     <p>Náhled titulní stránky rozsudku:</p>
-    <img src="rozsudek-náhled.jpg" alt="Náhled rozsudku">
+    <img src="rozsudek-náhled.jpg" alt="Náhled rozsudku" class="thumb" onclick="showOverlay()">
     <p><em>Rozsudek je k nahlédnutí na vyžádání. Tento výřez slouží pouze jako důkaz autenticity.</em></p>
-</body>
-</html>
 
+    <div class="overlay" id="overlay" onclick="hideOverlay()">
+        <img src="rozsudek-náhled.jpg" alt="Rozsudek ve větší velikosti">
+    </div>
 
-  <footer>
-    &copy; 2025 Ing. arch. Vít Kučera – bývalý městský architekt Mníšku pod Brdy
-  </footer>
+    <script>
+        function showOverlay() {
+            document.getElementById("overlay").style.display = "flex";
+        }
+        function hideOverlay() {
+            document.getElementById("overlay").style.display = "none";
+        }
+    </script>
 </body>
 </html>
